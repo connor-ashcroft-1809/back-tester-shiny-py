@@ -1,6 +1,6 @@
 import pandas as pd
-from classes.func.simulate_trading import simulate_trading_
-from classes.func.dochian_channel import generate_signals_dochian_channel_strat
+from logical_components.func.simulate_trading import simulate_trading_
+from logical_components.func.dochian_channel import generate_signals_dochian_channel_strat
 
 
 class BaseStrategy:
@@ -8,7 +8,6 @@ class BaseStrategy:
         self.data = data.copy()
         self.initial_equity = initial_equity
         self.equity = self.initial_equity
-        self.no_of_shares = 0
         self.open = 0
         self.close = 0
         self.open_date = ""
